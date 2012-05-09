@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+            
+            <!-- iPad/iPhone specific css below, add after your main css >
+             <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+             <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+             -->
+            <!-- If you application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+					<link rel="stylesheet"  href="jquery.mobile-1.1.0.css" />
+					<link rel="stylesheet" href="demos/docs/_assets/css/jqm-docs.css" />
+					<script src="demos/js/jquery.js"></script>
+					<script src="demos/docs/_assets/js/jqm-docs.js"></script>
+					<script src="demos/js/jquery.mobile-1.1.0.js"></script>
+
+            <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+            <script type="text/javascript" charset="utf-8" src="SAiOSAdPlugin.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova-WebInspector.js"></script>
+            
+            <script type="text/javascript" charset="utf-8">
+                
+                             
+                function onBodyLoad() {
+                    document.addEventListener("deviceready", onDeviceReady,false);
+                }
+                
+                function onOrientationChange() {
+                    //alert(window.orientation);
+                }
+                
+                /* When this function is called, PhoneGap has been initialized and is ready to roll */
+                function onDeviceReady() {
+                                       
+                    window.plugins.iAdPlugin.showAd(true);
+
+                }
+                
+                               
+                </script>
+            </head>
+    <body style="margin:0; padding:0;border:1px solid blue;" onload="onBodyLoad()">
+        <span style="position:absolute; top:0;">
+            This is some text at the top of the webview.
+        </span>
+        <br /><br />
+
+
+<div data-role="page" class="type-home">
+	<div data-role="content">
+		<p id="jqm-version">1.1.0 Final Release</p>
+
+
+		<div class="content-secondary">
+
+			<div id="jqm-homeheader">
+				<h1 id="jqm-logo"><img src="demos/docs/_assets/images/jquery-logo.png" alt="jQuery Mobile Framework" /></h1>
+				<p>A Touch-Optimized UI Framework built with jQuery and HTML5.</p>
+			</div>
+
+
+			<p class="intro"><strong>Welcome.</strong> jQuery Mobile is the easiest way to build sites and apps that are accessible on all popular smartphone, tablet and desktop devices. For jQuery 1.6.4 and 1.7.1.</p>
+
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f">
+				<li data-role="list-divider">Overview</li>
+				<li><a href="docs/about/intro.html">Intro to jQuery Mobile</a></li>
+				<li><a href="docs/about/getting-started.html">Quick start guide</a></li>
+				<li><a href="docs/about/features.html">Features</a></li>
+				<li><a href="docs/about/accessibility.html">Accessibility</a></li>
+				<li><a href="docs/about/platforms.html">Supported platforms</a></li>
+			</ul>
+
+		</div><!--/content-primary-->
+
+		<div class="content-primary">
+			<nav>
+
+
+				<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+					<li data-role="list-divider">Components</li>
+					<li><a href="docs/pages/index.html">Pages &amp; dialogs</a></li>
+					<li><a href="docs/toolbars/index.html">Toolbars</a></li>
+					<li><a href="docs/buttons/index.html">Buttons</a></li>
+					<li><a href="docs/content/index.html">Content formatting</a></li>
+					<li><a href="docs/forms/index.html">Form elements</a></li>
+					<li><a href="docs/lists/index.html">List views</a></li>
+
+					<li data-role="list-divider">API</li>
+					<li><a href="docs/api/globalconfig.html">Configuring defaults</a></li>
+					<li><a href="docs/api/events.html">Events</a></li>
+					<li><a href="docs/api/methods.html">Methods &amp; Utilities</a></li>
+					<li><a href="docs/api/data-attributes.html">Data attribute reference</a></li>
+					<li><a href="docs/api/themes.html">Theme framework</a></li>
+
+
+				</ul>
+			</nav>
+		</div>
+
+
+
+	</div>
+
+	<div data-role="footer" class="footer-docs" data-theme="c">
+			<p>&copy; 2011-12 The jQuery Foundation</p>
+	</div>
+
+</div>
+
+<br />
+        <span style="position:absolute;bottom:0">
+            This is some text at the bottom of the webview.
+        </span>
+    </body>
+</html>
