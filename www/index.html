@@ -34,6 +34,15 @@
                 /* When this function is called, PhoneGap has been initialized and is ready to roll */
                 function onDeviceReady() {
                                        
+                    
+                    
+                    
+                    window.addEventListener("orientationchange", window.plugins.iAdPlugin.orientationChanged, false);
+                    window.plugins.iAdPlugin.orientationChanged(true);//trigger immediately so iAd knows its orientation on first load
+                    // listen for the "iAdBannerViewDidLoadAdEvent" that is sent by the iAdPlugin
+
+                    
+                    
                     window.plugins.iAdPlugin.showAd(true);
 
                 }
